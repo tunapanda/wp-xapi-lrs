@@ -1,2 +1,2 @@
 # wp-xapi
-Turn your Wordpress site into a learning record store
+Enables your WordPress site to act as an xAPI Learning Record Store.
