@@ -1,0 +1,9 @@
+{
+    "xapiEndpoint": "http://localhost/repo/MiniXapi/",
+    "xapiUsername": "7b880fc1f371715ce24309b90e051fcd24d700c3",
+    "xapiPassword": "c089ce76ca667862e615995b909f2ddf9acc1795",
+
+    "columns": [{
+        "aggregateType": "count"
+    }]
+}

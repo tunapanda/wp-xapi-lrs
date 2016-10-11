@@ -1,0 +1,3 @@
+[submodule "submodule/minixapi"]
+	path = submodule/minixapi
+	url = https://github.com/limikael/minixapi/
