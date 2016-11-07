@@ -10,4 +10,11 @@ This WordPress plugin enables your WordPress site to act as an [xAPI](https://en
 
 ## How to use
 
-After installation, we can test the functionality using curl. Go to _Settings >> xAPI LRS_ to see the credentials for the newly created LRS on your system. The username and password will be randomly generated upon installation.
+Go to _Settings >> xAPI LRS_ to see the url for the xAPI endpoint, as well credentials for the newly created LRS on your system. The username and password will be randomly generated upon installation. We can try to access the endpoint using curl:
+
+    curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/"
+    
+    {
+        "error": true,
+        "message": "Expected xAPI method, try appending \/statements to the url."
+    }
