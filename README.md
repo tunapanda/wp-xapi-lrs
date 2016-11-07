@@ -44,4 +44,44 @@ We are getting an empty list of statements back from the LRS, so something is wo
         }
     }
 
-Put the statement in a file called statement.json. Insert the sta
+Put the statement in a file called statement.json. Insert the statement using the following curl command:
+
+    curl -X POST --data-binary @statement.json  "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/statements"
+    [
+        "e1dc2120-ca22-4500-96a2-611b32edfb70"
+    ]
+
+It worked! The data we got back is the [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) for the statement. Let's try to retreive it:
+
+    curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/statements"
+    {
+        "statements": [
+            {
+                "id": "e1dc2120-ca22-4500-96a2-611b32edfb70",
+                "stored": "2016-11-07T09:44:53.000+00:00",
+                "actor": {
+                    "objectType": "Agent",
+                    "name": "Sally Glider",
+                    "mbox": "mailto:sally@example.com"
+                },
+                "verb": {
+                    "id": "http:\/\/adlnet.gov\/expapi\/verbs\/experienced",
+                    "display": {
+                        "en-US": "experienced"
+                    }
+                },
+                "timestamp": "2016-11-07T09:44:53.000+00:00",
+                "object": {
+                    "objectType": "Activity",
+                    "id": "http:\/\/example.com\/activities\/solo-hang-gliding",
+                    "definition": {
+                        "name": {
+                            "en-US": "Solo Hang Gliding"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+
+Yep the statement seems to be there!
