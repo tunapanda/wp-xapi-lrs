@@ -307,7 +307,10 @@ class MiniXapi {
 			);
 		}
 
-		else throw new Exception("Unknown method: $method $url");
+		if (!$url)
+			throw new Exception("Expected xAPI method, try appending /statements to the url.");
+
+		throw new Exception("Unknown method: $method $url");
 	}
 
 	/**

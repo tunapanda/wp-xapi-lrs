@@ -64,7 +64,7 @@ The function `putStatement` is used to put a statement into the learning record 
 
 The function `getStatements` is used to search for and retreive statements from the learning record store. This function accepts an array as input, and returns an array of matching statements. The fields of the array corresponds to the fields used when getting statements from an xAPI record store, see the [xAPI standard documentation](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI-Communication.md#213-get-statements) for details.
 
-Please not that at the time of writing this functionality is very incomplete, and only the fields `agent`, `verb`, `activity`, `statementId"` and `related_activities` work according to the standard.
+Please not that at the time of writing this functionality is very incomplete, and only the fields `agent`, `verb`, `activity`, `statementId` and `related_activities` work according to the standard.
 
 
 ```php
