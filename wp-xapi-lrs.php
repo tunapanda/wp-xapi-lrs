@@ -12,7 +12,7 @@ Plugin Name: xAPI LRS
 Plugin URI: http://github.com/tunapanda/wp-xapi-lrs
 GitHub Plugin URI: http://github.com/tunapanda/wp-xapi-lrs
 Description: Enables your WordPress site to act as an xAPI Learning Record Store.
-Version: 0.0.1
+Version: 0.0.2
 */
 
 function xapilrs_activate() {
