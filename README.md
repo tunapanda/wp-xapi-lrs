@@ -3,6 +3,7 @@ Enables your WordPress site to act as an xAPI Learning Record Store.
 
 * [Introduction](#introduction)
 * [How to use](#how-to-use)
+* [Development](#development)
 
 ## Introduction
 
@@ -85,3 +86,15 @@ It worked! The data we got back is the [UUID](https://en.wikipedia.org/wiki/Univ
     }
 
 Yep, it seems like the statement is there!
+
+## Development
+
+The [minixapi](https://github.com/limikael/minixapi/) module is linked as a git submodule, under the `submodule` directory. However, as a convenience it is also copied and checked in to this repository under the `ext` directory. In order to keep these copies in sync, you can run the following command to copy the contents of the submodule to the ext directory:
+
+    make copy-deps
+
+If you want to work on the submodule at the same time as you work on this repository, you can use this command:
+
+    make link-deps
+
+This creates a symbolic link from the `ext` directory to the `submodule` directory. We want the copy of the submodule checked in to the repository, and not the link, so don't forget to run `make copy-deps` before you add files and commit!
