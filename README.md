@@ -84,4 +84,4 @@ It worked! The data we got back is the [UUID](https://en.wikipedia.org/wiki/Univ
         ]
     }
 
-Yep the statement seems to be there!
+Yep, it seems like the statement is there!
