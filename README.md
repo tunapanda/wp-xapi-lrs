@@ -21,7 +21,7 @@ Go to _Settings >> xAPI LRS_ to see the url for the xAPI endpoint, as well crede
 
 This error message is given because according to the [xAPI standard](https://github.com/adlnet/xAPI-Spec/blob/master/xAPI-Communication.md#21-statement-resource) we need to specify which resource we want to access. Currently, the only implemented resource is the _statements_ resource, so let's try to access that:
 
-    curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/"
+    curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/statements"
     
     {
         "statements": []
