@@ -5,3 +5,6 @@ copy-deps:
 link-deps:
 	rm -rf ext/minixapi
 	cd ext; ln -s ../submodule/minixapi minixapi
+
+readme:
+	wp2md convert readme.txt README.md
