@@ -27,4 +27,11 @@ from the complete list of filters found in the
 After the plugin is installed, you will find a settings page called
 _xAPI LRS_ in the _Settings_ section of the admin panel. On this page
 you will find the endpoint as well as credentials that can be used to connect
-to the LRS.
+to the LRS. The username and password will be randomly generated upon
+installation. We can try to access the endpoint using curl:
+
+  curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/"
+  {
+      "error": true,
+      "message": "Expected xAPI method, try appending \/statements to the url."
+  }
