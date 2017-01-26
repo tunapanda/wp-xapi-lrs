@@ -28,8 +28,8 @@ you will find the endpoint as well as credentials that can be used to connect
 to the LRS. The username and password will be randomly generated upon
 installation. We can try to access the endpoint using curl:
 
-  curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/"
-  {
-      "error": true,
-      "message": "Expected xAPI method, try appending \/statements to the url."
-  }
+    curl "http://8260a014ad6016ba2af2ed0c0f7684e0:7078d3dc378947905994affa86c20d48@localhost/wordpress/wp-content/plugins/wp-xapi-lrs/endpoint.php/"
+    {
+        "error": true,
+        "message": "Expected xAPI method, try appending \/statements to the url."
+    }
