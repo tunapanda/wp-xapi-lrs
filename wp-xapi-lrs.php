@@ -1,12 +1,5 @@
 <?php
 
-require_once __DIR__."/ext/minixapi/MiniXapi.php";
-require_once __DIR__."/include/WpUtil.php";
-require_once __DIR__."/include/Template.php";
-
-use xapilrs\WpUtil;
-use xapilrs\Template;
-
 /*
 Plugin Name: xAPI LRS
 Plugin URI: http://github.com/tunapanda/wp-xapi-lrs
@@ -14,6 +7,18 @@ GitHub Plugin URI: http://github.com/tunapanda/wp-xapi-lrs
 Description: Enables your WordPress site to act as an xAPI Learning Record Store.
 Version: 0.0.2
 */
+
+if (!defined("PHP_VERSION_ID") || PHP_VERSION_ID<50500) {
+	trigger_error('Your PHP version is too old, you need at least 5.5.0, you have '.phpversion(),E_USER_ERROR);
+	return;
+}
+
+require_once __DIR__."/ext/minixapi/MiniXapi.php";
+require_once __DIR__."/include/WpUtil.php";
+require_once __DIR__."/include/Template.php";
+
+use xapilrs\WpUtil;
+use xapilrs\Template;
 
 function xapilrs_activate() {
 	global $wpdb;
